@@ -44,25 +44,311 @@ export const categories = [
 export const featured = [
     {
         id: 1,
-        title: 'Guitars',
-        description: 'Guitar',
-        instruments: [
+        title: 'Verified Stores',
+        description: 'Find verified stores',
+        stores: [
             {
                 id: 1,
-                name: 'Red Guitar',
+                name: 'OpenStage Music',
                 image: require('../assents/images/instruments.jpg'),
-                description: 'Eletric Red Guitar',
+                stars: 5,
                 reviews: '5.9k',
-                category: 'instrument'
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
             },
             {
                 id: 2,
-                name: 'Blue Guitar',
+                name: 'OpenStage Music',
                 image: require('../assents/images/instruments.jpg'),
-                description: 'Eletric Blue Guitar',
+                stars: 5,
                 reviews: '5.9k',
-                category: 'instrument'
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
             },
+            {
+                id: 3,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id: 1,
+        title: 'Stores Near You',
+        description: 'Find the store closest to your home',
+        stores: [
+            {
+                id: 1,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            },
+            {
+                id: 2,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            },
+            {
+                id: 3,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        id: 1,
+        title: 'Popular',
+        description: 'Most popular stores',
+        stores: [
+            {
+                id: 1,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            },
+            {
+                id: 2,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Instrument Store',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            },
+            {
+                id: 3,
+                name: 'OpenStage Music',
+                image: require('../assents/images/instruments.jpg'),
+                stars: 5,
+                reviews: '5.9k',
+                category: 'Loja de instrumento',
+                addres: 'Porto Alegre - Brazil',
+                product: [
+                    {
+                        id: 1,
+                        name: 'Guitar',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 2,
+                        name: 'Bass',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 3,
+                        name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                ]
+            }
         ]
     },
 ]

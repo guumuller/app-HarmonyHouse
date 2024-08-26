@@ -3,8 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 import React from 'react'
 import HomeScreen from '@/screens/HomeScreen';
-import RestaurantScreen from '@/screens/InstrumentScreen';
-import InstrumentScreen from '@/screens/InstrumentScreen';
+import InstrumentScreen from '@/screens/StoreScreen';
 
 export default function Navigation() {
     return (

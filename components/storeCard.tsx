@@ -10,7 +10,7 @@ export default function StoreCard({item}) {
     const navigation = useNavigation();
     return (
         <TouchableWithoutFeedback
-            onPress={() => navigation.navigate('Store: ', {...item})}
+            onPress={() => navigation.navigate('Store', {...item})}
         >
             <View className="mr-6 bg-white rounded-3xl shadow-lg"
             >

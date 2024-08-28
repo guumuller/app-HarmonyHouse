@@ -13,6 +13,7 @@ export default function Navigation() {
         }}>
             <Stack.Screen name="Harmony House" component={HomeScreen} />
             <Stack.Screen name="Store" component={StoreScreen} />
+            
         </Stack.Navigator>
         
         

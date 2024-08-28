@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native"
+import { View, Text, ScrollView, Image, TouchableOpacity, VirtualizedList } from "react-native"
 import React from 'react'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import * as Icon from 'react-native-feather'

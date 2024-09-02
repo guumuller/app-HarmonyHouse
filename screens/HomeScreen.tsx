@@ -1,5 +1,5 @@
 //Página principal
-import { View, Text, StatusBar, TextInput, ScrollView } from "react-native"
+import { View, Text, StatusBar, TextInput, ScrollView, TouchableOpacity } from "react-native"
 import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context"
 import * as Icon from "react-native-feather";
@@ -10,7 +10,18 @@ import { featured } from "@/constants";
 export default function HomeScreen() {
     return (
         <SafeAreaView className="bg-white">
-            <Text className="text-center text-lg pb-5">Harmony House 🎶</Text>
+            <View className="flex-row justify-between p-4">
+                <Text className="text-center text-lg pb-5">Harmony House 🎶</Text>
+                <View className="flex-row justify-between">
+                    <TouchableOpacity className="pr-5">
+                        <Icon.User className="text-blue-900" />
+                    </TouchableOpacity>
+                    <TouchableOpacity>
+                        <Icon.ShoppingCart className="text-blue-900" />
+                    </TouchableOpacity>
+                </View>
+            </View>
+            
             <StatusBar barStyle="dark-content" />
             <View className="flex-row items-center space-x-2 px-4 pb-2">
                 <View className="flex-row flex-1 items-center p-3 rounded-full border border-gray-300">
@@ -47,8 +58,6 @@ export default function HomeScreen() {
                     }
                 </View>
             </ScrollView>
-
-        </SafeAreaView>
-            
+        </SafeAreaView>  
     )
 }

@@ -12,7 +12,7 @@ export default function StoreCard({item}) {
         <TouchableWithoutFeedback
             onPress={() => navigation.navigate('Store', {...item})}
         >
-            <View className="mr-6 bg-white rounded-3xl shadow-lg"
+            <View className="mr-6 bg-white rounded-3xl shadow-lg "
             >
                 <Image className="h-36 w-64 rounded-t-3xl" source={item.image} />
                 <View className="px-3 pb-4 space-y-2">

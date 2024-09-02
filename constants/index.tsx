@@ -55,6 +55,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -73,6 +74,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -87,6 +102,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -105,6 +121,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -119,6 +149,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -141,12 +172,26 @@ export const featured = [
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
                     },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
                 ]
             }
         ]
     },
     {
-        id: 1,
+        id: 2,
         title: 'Stores Near You',
         description: 'Find the store closest to your home',
         stores: [
@@ -158,6 +203,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -176,6 +222,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -190,6 +250,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -208,6 +269,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -222,6 +297,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -244,12 +320,26 @@ export const featured = [
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
                     },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
                 ]
             }
         ]
     },
     {
-        id: 1,
+        id: 3,
         title: 'Popular',
         description: 'Most popular stores',
         stores: [
@@ -261,6 +351,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -279,6 +370,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -293,6 +398,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Instrument Store',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -311,6 +417,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')
@@ -325,6 +445,7 @@ export const featured = [
                 reviews: '5.9k',
                 category: 'Loja de instrumento',
                 addres: 'Porto Alegre - Brazil',
+                description: 'Store dedicated to the sale of musical instruments, accessories and appliances.',
                 product: [
                     {
                         id: 1,
@@ -343,6 +464,20 @@ export const featured = [
                     {
                         id: 3,
                         name: 'Drums',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 4,
+                        name: 'Violin',
+                        description: 'product description',
+                        price: 10,
+                        image: require('../assents/images/instruments.jpg')
+                    },
+                    {
+                        id: 5,
+                        name: 'Harmonica',
                         description: 'product description',
                         price: 10,
                         image: require('../assents/images/instruments.jpg')

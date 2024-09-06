@@ -29,16 +29,26 @@ export default function ProductScreen({}) {
                     <Icon.Heart className="text-blue-900"  />
                 </TouchableOpacity>
             </View>
-            <ScrollView
-                horizontal
-                showsHorizontalScrollIndicator={false}
-                className="overflow-visible"
-                
-            >
-                
-                <Image source={item.image} className="h-36 w-64 rounded-3xl" />
-                
-            </ScrollView>
+            <View className="items-center">
+                <ScrollView
+                    horizontal
+                    showsHorizontalScrollIndicator={false}
+                    className="overflow-visible"
+                    
+                >
+                    
+                    <View className="border-solid border-2 rounded-2xl">
+                        <Image source={item.image} className="h-96 w-64 rounded-3xl" />
+                    </View>
+                    
+                    
+                    
+                </ScrollView>
+            </View>
+            
+            <View className="items-center mt-5">
+                <Text>{item.detailDescription}</Text>
+            </View>
         </SafeAreaView>
 
     )

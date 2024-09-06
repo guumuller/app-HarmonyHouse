@@ -61,36 +61,37 @@ export const featured = [
                         id: 1,
                         name: 'Guitar',
                         description: 'product description',
+                        detailDescription: 'Blue Guitar | 6 strings | Marca',
                         price: 10,
-                        image: require('../assents/images/instruments.jpg')
+                        image: require('../assents/images/blueguitar.webp')
                     },
                     {
                         id: 2,
                         name: 'Bass',
                         description: 'product description',
                         price: 10,
-                        image: require('../assents/images/instruments.jpg')
+                        image: require('../assents/images/blackbass.webp')
                     },
                     {
                         id: 3,
                         name: 'Drums',
                         description: 'product description',
                         price: 10,
-                        image: require('../assents/images/instruments.jpg')
+                        image: require('../assents/images/reddrums.jpg')
                     },
                     {
                         id: 4,
                         name: 'Violin',
                         description: 'product description',
                         price: 10,
-                        image: require('../assents/images/instruments.jpg')
+                        image: require('../assents/images/violin.webp')
                     },
                     {
                         id: 5,
                         name: 'Harmonica',
                         description: 'product description',
                         price: 10,
-                        image: require('../assents/images/instruments.jpg')
+                        image: require('../assents/images/harmonica.webp')
                     },
                 ]
             },

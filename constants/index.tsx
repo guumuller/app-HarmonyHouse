@@ -63,6 +63,9 @@ export const featured = [
                         description: 'product description',
                         detailDescription: 'Blue Guitar | 6 strings | Marca',
                         price: 10,
+                        stock: "+500",
+                        stars: 4,
+                        reviews: '5.0k',
                         image: require('../assents/images/blueguitar.webp')
                     },
                     {

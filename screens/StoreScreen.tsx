@@ -39,7 +39,6 @@ export default function StoreScreen() {
                                 <Icon.MapPin color="gray" width="15" height="15" />
                                 <Text className="text-gray-700 text-xs">{item.addres}</Text>
                             </View>
-                            
                         </View>
                         <View className="flex-row items-center space-x-1">
                                 <Image source={require('../assents/images/star.png')} className="h-4 w-4" />

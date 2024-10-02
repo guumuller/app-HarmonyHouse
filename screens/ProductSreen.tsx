@@ -45,10 +45,14 @@ export default function ProductScreen({}) {
             </ScrollView>
 
             {/* Fixed Cart Button */}
-            <View className="absolute bottom-5 left-0 right-0 items-center">
-                <TouchableOpacity className="bg-blue-900 flex-row items-center py-3 px-5 rounded-full">
+            <View className="absolute bottom-5 left-0 right-0 items-center flex-row justify-between px-10">
+                <TouchableOpacity className="bg-blue-900 flex-row items-center py-3 px-7 rounded-full">
                     <Icon.ShoppingCart color="white" />
                     <Text className="text-white ml-2">Add to cart</Text>
+                </TouchableOpacity>
+                <TouchableOpacity className="bg-blue-900 flex-row items-center py-3 px-7 rounded-full">
+                    <Text className="text-white ml-2">Buy now</Text>
+                    <Icon.ArrowRight color="white" />
                 </TouchableOpacity>
             </View>
         </SafeAreaView>

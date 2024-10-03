@@ -59,10 +59,10 @@ export const featured = [
                 product: [
                     {
                         id: 1,
-                        name: 'Guitar',
-                        description: 'product description',
-                        detailDescription: 'Blue Guitar | 6 strings | Marca',
-                        price: 10,
+                        name: 'Fender Stratocaster',
+                        description: 'A Tagima é considerada a primeira fabricante brasileira de instrumentos musicais a produzir em escala mundial, e competir de igual para igual com marcas consagradas internacionalmente. A empresa é referência em qualidade e possui uma das maiores fábricas de instrumentos musicais da América do Sul.',
+                        detailDescription: "",
+                        price: 599.99,
                         stock: "+500",
                         stars: 4,
                         reviews: '5.0k',

@@ -17,7 +17,7 @@ export default function StoreScreen() {
                     <Image className="w-full h-72" source={item.image} />
                     <TouchableOpacity
                         onPress={()=> navigation.goBack()}
-                    className="absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow [blue-900]"
+                        className="absolute top-14 left-4 bg-gray-50 p-2 rounded-full shadow [blue-900]"
                         
                     >
                         <Icon.ArrowLeft strokeWidth={3} className="text-blue-900"  />

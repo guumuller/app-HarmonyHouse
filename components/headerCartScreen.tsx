@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import * as Icon from 'react-native-feather'
 import { useRoute, useNavigation } from "@react-navigation/native";
 
-export default function HeaderProductScreen() {
+export default function HeaderCartScreen() {
     const { params } = useRoute();
     const navigation = useNavigation();
     const [isHeartRed, setIsHeartRed] = useState(false);  // Controla a cor do ícone Heart
@@ -24,24 +24,7 @@ export default function HeaderProductScreen() {
                 >
                     <Icon.ArrowLeft strokeWidth={3} className="text-blue-900"  />
                 </TouchableOpacity>
-                <View className="flex-row">
-                    <TouchableOpacity
-                        className="bg-gray-50 p-2 rounded-full shadow flex-row items-center "
-                    >
-                        <Icon.ShoppingCart className="text-blue-900 mr-2"  />
-                        <Text>Add to cart</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        className="bg-gray-50 p-2 rounded-full shadow ml-5"
-                        onPress={handleHeartPress}
-                    >
-                        <Icon.Heart className="text-blue-900"  
-                            fill={isHeartRed ? 'red' : 'none'}
-                            stroke={isHeartRed ? 'red' : "#1e3a8a"}
-                        />
-                    </TouchableOpacity>
-                </View>
-                
+                <Text className="text-white text-2xl">My Cart</Text>    
             </View>
     )
 }

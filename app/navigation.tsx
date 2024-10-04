@@ -5,6 +5,7 @@ import React from 'react'
 import HomeScreen from '@/screens/HomeScreen';
 import StoreScreen from '@/screens/StoreScreen';
 import ProductScreen from '@/screens/ProductSreen';
+import CartScreen from '@/screens/CartScreen';
 
 export default function Navigation() {
     return (
@@ -15,6 +16,7 @@ export default function Navigation() {
             <Stack.Screen name="Harmony House" component={HomeScreen} />
             <Stack.Screen name="Store" component={StoreScreen} />
             <Stack.Screen name="Product" component={ProductScreen} />
+            <Stack.Screen name="Cart" component={CartScreen} />
             
         </Stack.Navigator>
         

@@ -1,14 +1,18 @@
-import { View, Text, ScrollView, TouchableOpacity, Image, StyleSheet } from "react-native"
-import React from 'react'
+import { View, Text, ScrollView, TouchableOpacity, Image, StyleSheet, Modal, Pressable, VirtualizedList } from "react-native"
+import React, { useState } from 'react'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import * as Icon from 'react-native-feather'
 import { SafeAreaView } from "react-native-safe-area-context";
 import HeaderProductScreen from "@/components/headerProductScreen";
+import ProductCarousel from "@/components/productCarousel";
+import ProductInformations from "@/components/productInformations";
 
 export default function ProductScreen({}) {
     const { params } = useRoute();
     const navigation = useNavigation();
     let item = params;
+
+    const [modalVisible, setModalVisible] = useState(false);
 
     return (
         <SafeAreaView className="bg-gray-200 flex-1"> 
@@ -17,130 +21,57 @@ export default function ProductScreen({}) {
 
             {/* Scrollable content */}
             <ScrollView>
-                <View className="items-center mt-12">
-                    <ScrollView
-                        horizontal
-                        showsHorizontalScrollIndicator={false}
-                        className="overflow-visible"
-                    >  
-                        <View className="aspect-auto" style={styles.image}>
-                            <Image source={item.image} className="h-96 w-72 rounded-2xl" />
-                        </View>
-                    </ScrollView>
-                </View>
-                
-                <View className="flex-row justify-between mt-5 px-5">
-                    <Text className="font-bold text-lg">{item.name}</Text>
-                    <Text className="font-bold text-xl">${item.price}</Text>
-                </View>
-                <View className="flex-row space-x-2 my-1 justify-between px-5 pb-3">
-                    <Text>Products in stock: {item.stock}</Text>
-                    <View className="flex-row items-center space-x-1">
-                    <Image source={require('../assents/images/star.png')} className="h-4 w-4" />
-                        <Text className="text-green-700">{item.stars}</Text>
-                        <Text className="text-gray-700 text-xs">({item.reviews}reviews)</Text>
-                    </View>
-                </View>
-                <Text className="px-5 text-xl">PRODUCT DETAILS</Text>
+                <View className="items-center">
 
-                <View className=" bottom-5 left-0 right-0 items-center flex-row justify-between px-10 mt-10">
-                    <TouchableOpacity className="bg-blue-900 flex-row items-center py-3 px-7 rounded-full">
-                        <Text className="text-white ml-2">Buy now</Text>
-                        <Icon.ArrowRight color="white" />
+                    {/* Carousel */}
+                    <ProductCarousel />
+
+                </View>
+
+                {/* Informations */}    
+                <ProductInformations />
+            </ScrollView>
+                <View className="absolute bottom-0 left-0 right-0 items-center pb-5">
+                    <TouchableOpacity className="bg-blue-900 flex-row items-center py-3 px-5 rounded-full" onPress={() => setModalVisible(true)}>
+                        <Text className="text-white">Buy now</Text>
+                        <Icon.ChevronUp className="text-white" />
                     </TouchableOpacity>
                 </View>
-            </ScrollView>            
+
+                <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => setModalVisible(false)}
+                >
+                    <View className="flex-1 justify-center items-center bg-black/50">
+                        <View className="bg-white w-4/5 p-5 rounded-2xl">
+                            <Text className="font-bold text-lg mb-4">Make Payment:</Text>
+                            <Text>Product: {item.name}</Text>
+                            <View className="items-center mt-2">
+                                <Image className="rounded-3xl" style={{height: 350, width: 300}}
+                                    source={item.image}
+                                />
+                                <Text>${item.price}</Text>
+                            </View>
+                            
+                            {/* Payment button */}
+                            <TouchableOpacity
+                                className="mt-5 bg-green-700 py-2 px-4 rounded-lg"
+                            >
+                                <Text className="text-white text-center">Confirm Payment</Text>
+                            </TouchableOpacity>
+
+                            {/* Close button */}
+                            <TouchableOpacity
+                                className="mt-5 bg-red-500 py-2 px-4 rounded-lg"
+                                onPress={() => setModalVisible(false)}
+                            >
+                                <Text className="text-white text-center">Close</Text>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
         </SafeAreaView>
     );
 }
-
-const styles = StyleSheet.create({
-    image: {
-        
-    }
-})
-
-
-// import React, { useState } from "react";
-// import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
-
-// const App = () => {
-//   const [modalVisible, setModalVisible] = useState(false);
-//   return (
-//     <View style={styles.centeredView}>
-//       <Modal
-//         animationType="slide"
-//         transparent={true}
-//         visible={modalVisible}
-//         onRequestClose={() => {
-//           Alert.alert("Modal has been closed.");
-//           setModalVisible(!modalVisible);
-//         }}
-//       >
-//         <View style={styles.centeredView}>
-//           <View style={styles.modalView}>
-//             <Text style={styles.modalText}>Hello World!</Text>
-//             <Pressable
-//               style={[styles.button, styles.buttonClose]}
-//               onPress={() => setModalVisible(!modalVisible)}
-//             >
-//               <Text style={styles.textStyle}>Hide Modal</Text>
-//             </Pressable>
-//           </View>
-//         </View>
-//       </Modal>
-//       <Pressable
-//         style={[styles.button, styles.buttonOpen]}
-//         onPress={() => setModalVisible(true)}
-//       >
-//         <Text style={styles.textStyle}>Show Modal</Text>
-//       </Pressable>
-//     </View>
-//   );
-// };
-
-// const styles = StyleSheet.create({
-//   centeredView: {
-//     flex: 1,
-//     justifyContent: "center",
-//     alignItems: "center",
-//     marginTop: 22
-//   },
-//   modalView: {
-//     margin: 20,
-//     backgroundColor: "white",
-//     borderRadius: 20,
-//     padding: 35,
-//     alignItems: "center",
-//     shadowColor: "#000",
-//     shadowOffset: {
-//       width: 0,
-//       height: 2
-//     },
-//     shadowOpacity: 0.25,
-//     shadowRadius: 4,
-//     elevation: 5
-//   },
-//   button: {
-//     borderRadius: 20,
-//     padding: 10,
-//     elevation: 2
-//   },
-//   buttonOpen: {
-//     backgroundColor: "#F194FF",
-//   },
-//   buttonClose: {
-//     backgroundColor: "#2196F3",
-//   },
-//   textStyle: {
-//     color: "white",
-//     fontWeight: "bold",
-//     textAlign: "center"
-//   },
-//   modalText: {
-//     marginBottom: 15,
-//     textAlign: "center"
-//   }
-// });
-
-// export default App;

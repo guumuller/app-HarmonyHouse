@@ -1,9 +1,7 @@
-import { View, Text, ScrollView, Image, TouchableOpacity, VirtualizedList, Linking, ImageBackground } from "react-native"
+import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native"
 import React from 'react'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import * as Icon from 'react-native-feather'
-import navigation from "@/app/navigation";
-import HomeScreen from "./HomeScreen";
 import ProductRow from "@/components/productRow";
 
 export default function StoreScreen() {

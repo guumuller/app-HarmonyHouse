@@ -1,17 +1,21 @@
 import { View, Text, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import * as Icon from 'react-native-feather'
 import navigation from '@/app/navigation'
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 export default function ProductRow({item}) {
     const {params} = useRoute();
-    
+    const [isHeartRed, setIsHeartRed] = useState(false);
     const navigation = useNavigation();
 
     const smallDescription = item.description.length > 50 
     ? item.description.substring(0, 50) + '...' 
     : item.description;
+
+    const handleHeartPress = () => {
+        setIsHeartRed(!isHeartRed);  // Alterna entre vermelho e cor original
+    };
 
     return (
         <View className="flex-row items-center bg-white p-3 rounded-3xl shadow-2xl mb-3 mx-2">
@@ -19,8 +23,12 @@ export default function ProductRow({item}) {
             source={item.image}
             />
             <View className="flex flex-1 space-y-3 relative">
-                <TouchableOpacity>
-                    <Icon.Heart className="absolute right-1  p-2 rounded-full shadow text-blue-900" />
+                <TouchableOpacity className="p-2">
+                    <Icon.Heart className="absolute right-1 p-2 rounded-full shadow text-blue-900" 
+                        onPress={handleHeartPress}
+                        fill={isHeartRed ? 'red' : 'none'}
+                        stroke={isHeartRed ? 'red' : "#1e3a8a"}
+                    />
                 </TouchableOpacity>
                 <View className="pl-3">
                     <Text className="text-xl">{item.name}</Text>

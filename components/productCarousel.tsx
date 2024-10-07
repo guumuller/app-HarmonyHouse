@@ -11,7 +11,7 @@ export default function ProductCarousel({}) {
         <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            className="overflow-visible mt-16"
+            className="overflow-visible mt-12"
         >  
             <View className="aspect-auto flex-row">
                 <Image source={item.image} className="h-96 w-72 rounded-2xl ml-2 mr-2" />

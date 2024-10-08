@@ -14,7 +14,7 @@ export default function HeaderCartScreen() {
     };
 
     return (
-            <View className="absolute top-0 left-0 right-0 z-10 flex-row justify-between items-center p-5 bg-blue-900"
+            <View className="absolute top-0 left-0 right-0 z-10 flex-row justify-between items-center p-5"
             
             >
                 
@@ -24,7 +24,7 @@ export default function HeaderCartScreen() {
                 >
                     <Icon.ArrowLeft strokeWidth={3} className="text-blue-900"  />
                 </TouchableOpacity>
-                <Text className="text-white text-2xl">My Cart</Text>    
+                <Text className="text-2xl">My Cart</Text>    
             </View>
     )
 }

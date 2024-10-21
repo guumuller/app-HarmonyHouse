@@ -27,20 +27,39 @@ export default function SignUpScreen() {
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState({});
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         try {
-        
-        const result = schema.parse({ username, email, phoneNumber, password, confirmPassword });
-        
-        navigation.navigate('Harmony House');
-        } catch (err) {
-        if (err instanceof z.ZodError) {
-            const formattedErrors = {};
-            err.errors.forEach((error) => {
-            formattedErrors[error.path[0]] = error.message;
+            const result = schema.parse({ username, email, phoneNumber, password, confirmPassword });
+    
+            const response = await fetch('http://127.0.0.1:5000/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    username,
+                    email,
+                    phone_number: phoneNumber,
+                    password,
+                }),
             });
-            setErrors(formattedErrors);
-        }
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                navigation.navigate('Welcome');
+            } else {
+                setErrors({ apiError: data.error });
+            }
+    
+        } catch (err) {
+            if (err instanceof z.ZodError) {
+                const formattedErrors = {};
+                err.errors.forEach((error) => {
+                    formattedErrors[error.path[0]] = error.message;
+                });
+                setErrors(formattedErrors);
+            }
         }
     };
 

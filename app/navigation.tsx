@@ -9,6 +9,7 @@ import CartScreen from '@/screens/CartScreen';
 import LoginScreen from '@/screens/LoginScreen';
 import GetStartedScreen from '@/screens/GetStartedScreen';
 import SignUpScreen from '@/screens/SignUpScreen';
+import WelcomeScreen from '@/screens/WelcomeScreen';
 
 export default function Navigation() {
     return (
@@ -23,6 +24,7 @@ export default function Navigation() {
             <Stack.Screen name="Store" component={StoreScreen} />
             <Stack.Screen name="Product" component={ProductScreen} />
             <Stack.Screen name="Cart" component={CartScreen} />
+            <Stack.Screen name="Welcome" component={WelcomeScreen} />
             
         </Stack.Navigator>
         

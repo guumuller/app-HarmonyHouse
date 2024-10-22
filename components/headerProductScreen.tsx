@@ -1,23 +1,30 @@
 import { View, Text, TouchableOpacity } from "react-native"
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import * as Icon from 'react-native-feather'
 import { useRoute, useNavigation } from "@react-navigation/native";
+import { CartContext } from '../components/cartContext';
 
 export default function HeaderProductScreen() {
     const { params } = useRoute();
     const navigation = useNavigation();
-    const [isHeartRed, setIsHeartRed] = useState(false);  // Controla a cor do ícone Heart
+    const [isHeartRed, setIsHeartRed] = useState(false);  // controla a cor do ícone coração
+    const { addToCart } = useContext(CartContext); // usar o contexto
     let item = params;
 
+    
+
     const handleHeartPress = () => {
-        setIsHeartRed(!isHeartRed);  // Alterna entre vermelho e cor original
+        setIsHeartRed(!isHeartRed);  // alterna entre vermelho e cor original (azul)
+    };
+
+    const handleAddToCart = () => {
+        addToCart(item); // adicionar item ao carrinho
     };
 
     return (
             <View className="absolute top-0 left-0 right-0 z-10 flex-row justify-between items-center p-5"
             
-            >
-                
+            >         
                 <TouchableOpacity
                     onPress={() => navigation.goBack()}
                     className="bg-gray-50 p-2 rounded-full shadow"
@@ -27,6 +34,7 @@ export default function HeaderProductScreen() {
                 <View className="flex-row">
                     <TouchableOpacity
                         className="bg-gray-50 p-2 rounded-full shadow flex-row items-center "
+                        onPress={handleAddToCart}
                     >
                         <Icon.ShoppingCart className="text-blue-900 mr-2"  />
                         <Text>Add to cart</Text>
@@ -40,8 +48,7 @@ export default function HeaderProductScreen() {
                             stroke={isHeartRed ? 'red' : "#1e3a8a"}
                         />
                     </TouchableOpacity>
-                </View>
-                
+                </View>             
             </View>
     )
 }

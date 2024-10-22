@@ -1,8 +1,11 @@
+import { CartProvider } from "@/components/cartContext";
 import Navigation from "./navigation";
 
 export default function App() {
   return (
-    <Navigation />
+    <CartProvider>
+        <Navigation />
+    </CartProvider>
   );
 }
 

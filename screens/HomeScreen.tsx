@@ -6,7 +6,6 @@ import * as Icon from "react-native-feather";
 import Categories from "@/components/categories";
 import FeaturedRow from "@/components/featuredRow";
 import { featured } from "@/constants";
-import navigation from "@/app/navigation";
 import { useNavigation } from "@react-navigation/native";
 
 export default function HomeScreen({item}) {
@@ -18,12 +17,15 @@ export default function HomeScreen({item}) {
                 <Text className="text-center text-lg pb-5">Harmony House 🎶</Text>
                 <View className="flex-row justify-between">
                     <TouchableOpacity className="pr-5">
-                        <Icon.User className="text-blue-900" />
+                        <Icon.User className="text-blue-900 p-4" />
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Icon.ShoppingCart className="text-blue-900" 
-                            onPress={() => navigation.navigate('Cart', {...item})}
-                        />
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('Cart', {...item})}
+                    >
+                        <Icon.ShoppingCart className="text-blue-900 p-4" />
+                        <View className="absolute right-0 top-0 bg-red-500 rounded-full w-5 h-5 flex items-center justify-center -mr-1 -mt-1">
+                            <Text className="text-white text-xs">0</Text>
+                        </View>
                     </TouchableOpacity>
                 </View>
             </View>

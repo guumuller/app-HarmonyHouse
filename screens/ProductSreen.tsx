@@ -14,6 +14,8 @@ export default function ProductScreen({}) {
 
     const [modalVisible, setModalVisible] = useState(false);
 
+    
+
     return (
         <SafeAreaView className="bg-gray-200 flex-1"> 
             {/* Fixed Header */}
@@ -55,14 +57,13 @@ export default function ProductScreen({}) {
                                 <Text>${item.price}</Text>
                             </View>
                             
-                            {/* Payment button */}
+                            
                             <TouchableOpacity
                                 className="mt-5 bg-green-700 py-2 px-4 rounded-lg"
                             >
                                 <Text className="text-white text-center">Confirm Payment</Text>
                             </TouchableOpacity>
-
-                            {/* Close button */}
+                            
                             <TouchableOpacity
                                 className="mt-5 bg-red-500 py-2 px-4 rounded-lg"
                                 onPress={() => setModalVisible(false)}

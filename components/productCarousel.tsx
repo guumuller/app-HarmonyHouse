@@ -8,16 +8,8 @@ export default function ProductCarousel({}) {
     let item = params;
     
     return (
-        <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            className="overflow-visible mt-12 shadow-lg"
-        >  
-            <View className="aspect-auto flex-row ">
+            <View className="aspect-auto flex-row mt-10">
                 <Image source={item.image} className="h-96 w-72 rounded-2xl ml-2 mr-2" />
-                <Image source={item.image} className="h-96 w-72 rounded-2xl ml-2 mr-2" />
-                <Image source={item.image} className="h-96 w-72 rounded-2xl ml-2 mr-2" />
-            </View>
-        </ScrollView>
+            </View>      
     );
 }

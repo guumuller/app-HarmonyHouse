@@ -73,24 +73,22 @@ export default function SignUpScreen() {
 
     return (
         <ImageBackground
-            source={require('../assents/images/backgroundGetStarted.png')}
+            source={require('../assets/images/backgroundGetStarted.png')}
             style={{ flex: 1 }}
             resizeMode="cover"
         >
             <KeyboardAvoidingView
                 style={{ flex: 1 }}
                 behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+                keyboardVerticalOffset={Platform.OS === 'ios' ? 70 : 0}
             >
                 <ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
                     <View className="flex-1 justify-center items-center">
                         <View className="w-full h-full flex">
                             <View className="flex items-center">
-                                <Text className="text-white font-bold tracking-wider text-3xl my-10">
+                                <Text className="text-white font-bold tracking-wider text-3xl mt-16 mx-10 mb-24">
                                     Create your account and start browsing!
                                 </Text>
-                                <Image source={require('../assents/images/logoHarmonyHouse.png')}
-                                    className="h-40 w-48 mb-5"
-                                />
                             </View>
 
                             <View className="flex items-center mx-4 space-y-4">
@@ -163,7 +161,7 @@ export default function SignUpScreen() {
                                     className="bg-blue-900 w-full p-4 rounded-2xl mb-10"
                                     onPress={handleSubmit}
                                 >
-                                    <Text className="text-white text-center font-medium shadow-md">Create</Text>
+                                    <Text className="text-white text-center font-medium shadow-md">CREATE</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>

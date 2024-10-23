@@ -8,7 +8,7 @@ export default function WelcomeScreen() {
 
     return (
         <ImageBackground
-            source={require('../assents/images/backgroundGetStarted.png')}
+            source={require('../assets/images/backgroundGetStarted.png')}
             style={{ flex: 1 }}
             resizeMode="cover"
         >
@@ -17,14 +17,14 @@ export default function WelcomeScreen() {
                     User created successfully!
                 </Text>
                 <Text style={{ fontSize: 24}} className="font-bold text-white">
-                    Log in to proceed.
+                    Login to proceed.
                 </Text>
                 <TouchableOpacity 
                     className="bg-blue-900 w-80 p-4 rounded-2xl shadow-md mt-10"
                     onPress={() => navigation.navigate('Login')}
                 >
                     <Text className="text-center">
-                        Login
+                        LOGIN
                     </Text>
                 </TouchableOpacity>
             </View>

@@ -4,7 +4,7 @@ import StoreCard from './storeCard';
 
 export default function FeaturedRow({title, description, stores}) {
     return (
-        <View>
+        <View className="mb-16">
             <View className="flex-row justify-between items-center px-4">
                 <View>
                     <Text className="font-bold text-lg">{title}</Text>

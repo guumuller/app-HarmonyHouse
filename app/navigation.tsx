@@ -13,7 +13,6 @@ import WelcomeScreen from '@/screens/WelcomeScreen';
 
 export default function Navigation() {
     return (
-        
         <Stack.Navigator screenOptions={{
             headerShown: false
         }}>
@@ -25,9 +24,6 @@ export default function Navigation() {
             <Stack.Screen name="Product" component={ProductScreen} />
             <Stack.Screen name="Cart" component={CartScreen} />
             <Stack.Screen name="Welcome" component={WelcomeScreen} />
-            
-        </Stack.Navigator>
-        
-        
+        </Stack.Navigator>     
     )
 }

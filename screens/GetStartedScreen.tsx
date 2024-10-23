@@ -8,18 +8,19 @@ export default function GetStartedScreen() {
 
   return (
     <ImageBackground
-      source={require('../assents/images/backgroundGetStarted.png')}
+      source={require('../assets/images/backgroundGetStarted.png')}
       style={{ flex: 1 }}
       resizeMode="cover"
     >
         <View className=" w-full h-full justify-center items-center">
             <View className="flex items-center">
-                <Text className="text-white text-center font-bold text-5xl mb-32">
-                    Welcome
-                </Text>
-                <Image source={require('../assents/images/logoHarmonyHouse.png')}
-                    className="h-40 w-48 mb-32"
+                <Image source={require('../assets/images/logoHarmonyHouse.png')}
+                    className="h-20 w-80 mb-32"
                 />
+                <Text className="text-white text-center font-bold text-5xl mb-5">
+                    Welcome!
+                </Text>
+                
                 <TouchableOpacity className="bg-blue-900 w-80 p-4 rounded-2xl shadow-md"
                     onPress={() => navigation.navigate('Login')}
                     >

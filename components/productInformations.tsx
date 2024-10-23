@@ -18,7 +18,7 @@ export default function ProductInformations({}) {
                 <View className="flex-row space-x-2 my-1 justify-between px-5 pb-3">
                     <Text>Products in stock: {item.stock}</Text>
                     <View className="flex-row items-center space-x-1">
-                    <Image source={require('../assents/images/star.png')} className="h-4 w-4" />
+                    <Image source={require('../assets/images/star.png')} className="h-4 w-4" />
                         <Text className="text-green-700">{item.stars}</Text>
                         <Text className="text-gray-700 text-xs">({item.reviews}reviews)</Text>
                     </View>

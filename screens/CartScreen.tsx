@@ -20,7 +20,7 @@ export default function CartScreen() {
                             <Image
                                 className="mt-4"
                                 style={{ height: 180, width: 180 }}
-                                source={require('../assets/images/carrinho.png')}
+                                source={require('../assets/images/icons/carrinho.png')}
                             />
                         </>
                     </View>                

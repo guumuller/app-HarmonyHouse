@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native"
+import { View, Text, ScrollView, Image, TouchableOpacity, Linking } from "react-native"
 import React from 'react'
 import { useRoute, useNavigation } from "@react-navigation/native";
 import * as Icon from 'react-native-feather'
@@ -39,7 +39,7 @@ export default function StoreScreen() {
                             </View>
                         </View>
                         <View className="flex-row items-center space-x-1">
-                                <Image source={require('../assets/images/star.png')} className="h-4 w-4" />
+                                <Image source={require('../assets/images/icons/star.png')} className="h-4 w-4" />
                                 <Text className="text-xs">
                                     <Text className="text-green-700">{item.stars}</Text>
                                     <Text className="text-gray-700">
